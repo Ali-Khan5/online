@@ -633,8 +633,11 @@ textarea.input100 {
   margin: auto;
 }
 .myPosterImg{
-  width:100%;
-  height: 100vh; 
+  width: 100%;
+  height: 100vh;
+  color:white;
+  background-color:black;
+  padding: 50px;
 }
 /* .master-container> div {
 	width: 50%;
@@ -644,7 +647,17 @@ textarea.input100 {
 .master-container > div:first-child {
 	margin-right: 10px;
 } */
-
+.mainfont{
+  font-size: 4em;
+  letter-spacing: 0.07rem;
+    margin-top: 10px;
+}
+.ibmPlex{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.ibmMono{
+  font-family: 'IBM Plex Mono', monospace;
+}
 /* @extend display-flex; */
 display-flex,
 .wrap-contact100 {
@@ -659,7 +672,7 @@ display-flex,
   }
   .myPosterImg{
     width:100%;
-  height: 90vh; 
+  height: 100vh; 
   }
   .splitleft {
     flex-direction: column;
@@ -690,9 +703,7 @@ display-flex,
     width:100%;
   height: 100vh; 
   }
-  .myPosterImg{
-    width:100%;
-  }
+ 
   .submit-to-google-form {
     padding: 50px 40px 50px 40px;
   }
@@ -703,15 +714,18 @@ display-flex,
   }
 }
 @media screen and (max-width: 575px) {
-  .myPosterImg{
-    width:100%;
-  height: 80vh; 
+  .mainfont{
+    font-size: 3rem;
   }
   .myPosterImg{
+   
     width:100%;
+    min-width: 350px;
+  height: 1000px; 
+  padding: 20px;
   }
+
   .master-container {
-  
     width: 100%;
   margin:0;
   }
