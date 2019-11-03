@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Digital Developer Conference</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="vendor/ibm-512.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="util.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!--===============================================================================================-->
+
+</head>
+
+<body>
+	<div class="master-container">
+
+		<div class="splitleft">
+			<img alt="vendor/ibm-512.png" class="myPosterImg"style="height: 100%; object-fit:fill" src="vendor/bg.jpeg">
+		</div>
+		<div class="splitright">
+
+
+
+
+
+			<!-- <div class="container-contact100"> -->
+			<div class="wrap-contact100">
+				<form id="test-form" name="submit-to-google-sheet" class="contact100-form validate-form">
+					<span class="contact100-form-title">
+						Digital Developer Conference
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">Registration Form </span>
+						<input class="input100" type="text" id="name" name="name" placeholder="Enter your name"
+							required="">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">CNIC</span>
+
+						<input class="input100" type="text" data-inputmask="'mask': '99999-9999999-9'"
+							placeholder="XXXXX-XXXXXXX-X" name="cnic" required="">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Enter your email addess"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required="">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100">Where are you based in?</span>
+						<div>
+							<select class="selection-2" name="location">
+								<option>Choose Location</option>
+								<option>Islamabad</option>
+								<option>Karachi</option>
+
+							</select>
+						</div>
+
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100">Profession</span>
+						<div>
+							<select class="selection-2" name="profession">
+								<option>Choose Profession</option>
+								<option>Student</option>
+								<option>Professional</option>
+
+							</select>
+						</div>
+
+						<span class="focus-input100"></span>
+					</div>
+
+
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100">Interest</span>
+						<div>
+							<select class="selection-2" name="interest">
+								<option>Select Interest</option>
+								<option>Cloud Native Computing</option>
+								<option>Machine Learning</option>
+
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100">Where will you be attending the event from?</span>
+						<div>
+							<select class="selection-2" name="placeattend">
+								<option>Choose location</option>
+								<option>Watch Party</option>
+								<option>Home</option>
+
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+
+
+						<span class="focus-input100"> * Watch Party Information </span>
+						<br>
+						<p><b>Timmings: </b> 11:30 AM - 4:30 PM </p>
+						<p> <b>Islamabad:</b> NUML University </p>
+						<p><b>Karachi: </b> Bahria University </p>
+						<br>
+						<p><b><i>* Lunch and IBM swag will be provided by IBM to attendees of Watch Party*</i></b></p>
+					</div>
+
+					<div class="container-contact100-form-btn">
+						<div class="wrap-contact100-form-btn">
+							<div class="contact100-form-bgbtn"></div>
+							<!-- <button type="submit"id="submit-form">Submit</button> -->
+							<button class="contact100-form-btn" type="submit" id="submit-form">
+								<span>
+									Submit
+									
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+	<script>
+		function myFunction() {
+			if (window.confirm('Registration Successful.Click Ok to Sign up on IBM Cloud for Digital Developer Conference 2019')) {
+				window.location.href = 'https://cloud.ibm.com/registration?cm_sp=ibmdev-_-ddc-lp-_-ov73651-in-reg&cm_mmc=Email_Events-_-Developer_IBM+Developer-_-WW_WW-_-ddc-ov73651-in-reg&cm_mmca1=000019RS&cm_mmca2=10004799&target=https://developer.ibm.com/digitalconference-resources"';
+			}
+		}
+	</script>
+	<script>
+		$(":input").inputmask();
+
+	</script>
+
+<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+	<script>
+		var $form = $('form#test-form'),
+			url = 'https://script.google.com/macros/s/AKfycbxYLgkkz5RAt-DcOF3BJ5G4BKf7ajBIHFZFK77hIt260tDANhew/exec';
+
+
+	</script>
+			<!--===============================================================================================-->
+			<script src="vendor/jquery-3.2.1.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="vendor/animsition.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="vendor/popper.js"></script>
+			<script src="vendor/bootstrap.min.js"></script>
+			<!--===============================================================================================-->
+			<script src="vendor/select2.min.js"></script>
+			<script src="vendor/minn.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/moment.min.js"></script>
+	<script src="vendor/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+
+
+
+	<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxUOvgO35UbGjflB4SDrX3hEOXX3x2BJn_6ZMlGZYYLTqxIJ6U/exec';
+		const form = document.forms['submit-to-google-sheet'];
+
+		form.addEventListener('submit', e => {
+			e.preventDefault();
+			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+				.then(response => myFunction()
+
+				)
+				.catch(error => console.error('Error!', error.message));
+		});
+	</script>
+
+</body>
+
+
+
+
+
+</html>

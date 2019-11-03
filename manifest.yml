@@ -1,0 +1,6 @@
+applications:
+- buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  host: devdemoconai
+  name: devdemoconai
+  memory: 64M
+  stack: cflinuxfs2
