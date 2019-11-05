@@ -87,7 +87,7 @@
 
 						<!-- <input class="input100" type="text" data-inputmask="'mask': '99999-9999999-9'"
 							placeholder="XXXXX-XXXXXXX-X" name="cnic" required=""> -->
-							<input class="input100" type="text" placeholder="XXXXX-XXXXXXX-X"  name="cnic" pattern="\d*" maxlength="15" id= "cnic" required="">
+							<input class="input100" type="text" placeholder="XXXXX-XXXXXXX-X"  name="cnic" pattern="\d{5}-\d{7}-\d" maxlength="15" id= "cnic" required="">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -105,7 +105,6 @@
 						<div>
 							<select class="selection-2" name="location">
 								<option>Choose Location</option>
-								<option>Islamabad</option>
 								<option>Karachi</option>
 
 							</select>
@@ -149,7 +148,7 @@
 						<span class="label-input100">Where will you be attending the event from?</span>
 						<div>
 							<select class="selection-2" name="placeattend">
-								<option>Choose location</option>
+								<option>What will be your perference</option>
 								<option>Watch Party</option>
 								<option>Home</option>
 
@@ -163,11 +162,11 @@
 
 						<span class="focus-input100"> * Watch Party Information </span>
 						<br>
-						<p><b>Timmings: </b> 11:30 AM - 4:30 PM </p>
-						<p> <b>Islamabad:</b> NUML University </p>
+						<p><b><i>* Registration for Karachi Only*</i></b></p>
+						<p><b>Timings: </b> 11:30 AM - 4:30 PM </p>
 						<p><b>Karachi: </b> Habib University </p>
 						<br>
-						<p><b><i>* Lunch and IBM swag will be provided by IBM to attendees of Watch Party*</i></b></p>
+						<p><b><i>* Lunch and IBM swag will be provided by IBM to attendees of Watch Party Only*</i></b></p>
 					</div>
 					<div class="wrap-input100 validate-input" id="processingForm">
 							<span class="focus-input100"> Please wait your form submission is being processed..... </span>
@@ -267,10 +266,11 @@
 		
 		form.addEventListener('submit', e => {
 			e.preventDefault();
-			document.getElementById('processingForm').style.display="block";
+			document.getElementById('done').style.display="none";
+			document.getElementById('processingForm').style.display="none";
 			fetch(scriptURL, { method: 'POST', mode:'no-cors',body: new FormData(form) })
 				.then(response => {
-				document.getElementById('done').style.display="block";;
+				document.getElementById('done').style.display="block";
 				myFunction();
 				}
 
@@ -278,6 +278,7 @@
 				.catch(error => {
 					console.error('Error!', error.message);
 					document.getElementById('processingForm').style.display="none";
+					document.getElementById('done').style.display="none";
 					document.getElementById('ErrorForm').style.display="block";
 					
 				});
