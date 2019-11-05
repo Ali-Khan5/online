@@ -85,8 +85,9 @@
 					<div class="wrap-input100 validate-input">
 						<span class="label-input100">CNIC</span>
 
-						<input class="input100" type="text" data-inputmask="'mask': '99999-9999999-9'"
-							placeholder="XXXXX-XXXXXXX-X" name="cnic" required="">
+						<!-- <input class="input100" type="text" data-inputmask="'mask': '99999-9999999-9'"
+							placeholder="XXXXX-XXXXXXX-X" name="cnic" required=""> -->
+							<input class="input100" type="text" placeholder="XXXXX-XXXXXXX-X"  name="cnic" pattern="\d*" maxlength="15" id= "cnic" required="">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -168,7 +169,19 @@
 						<br>
 						<p><b><i>* Lunch and IBM swag will be provided by IBM to attendees of Watch Party*</i></b></p>
 					</div>
-
+					<div class="wrap-input100 validate-input" id="processingForm">
+							<span class="focus-input100"> Please wait your form submission is being processed..... </span>
+							<br/>
+							<br/>
+					</div>
+					<div class="wrap-input100 validate-input" id="done">
+							<span class="focus-input100"> Form Successfully submitted </span>
+							<br/>
+					</div>
+					<div class="wrap-input100 validate-input" id="ErrorForm">
+							<span class="focus-input100"> ohh..there seems to be an error</span>
+							<br/>
+					</div>
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
@@ -188,6 +201,9 @@
 	<div id="dropDownSelect1"></div>
 	<script>
 		function myFunction() {
+			document.getElementById('processingForm').style.display="none";
+			
+			
 			if (window.confirm('Registration Successful.Click Ok to Sign up on IBM Cloud for Digital Developer Conference 2019')) {
 				window.location.href = 'https://cloud.ibm.com/registration?cm_sp=ibmdev-_-ddc-lp-_-ov73651-in-reg&cm_mmc=Email_Events-_-Developer_IBM+Developer-_-WW_WW-_-ddc-ov73651-in-reg&cm_mmca1=000019RS&cm_mmca2=10004799&target=https://developer.ibm.com/digitalconference-resources"';
 			}
@@ -248,14 +264,23 @@
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbx6QtyVCFtxPZCmsTkK9ZaLXEdcUtKUJx5DHZ9AMcXpIcW2VIM/exec';
 		const form = document.forms['submit-to-google-sheet'];
-
+		
 		form.addEventListener('submit', e => {
 			e.preventDefault();
+			document.getElementById('processingForm').style.display="block";
 			fetch(scriptURL, { method: 'POST', mode:'no-cors',body: new FormData(form) })
-				.then(response => myFunction()
+				.then(response => {
+				document.getElementById('done').style.display="block";;
+				myFunction();
+				}
 
 				)
-				.catch(error => console.error('Error!', error.message));
+				.catch(error => {
+					console.error('Error!', error.message);
+					document.getElementById('processingForm').style.display="none";
+					document.getElementById('ErrorForm').style.display="block";
+					
+				});
 		});
 	</script>
 

@@ -1,6 +1,6 @@
 applications:
 - buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  host: devdemoconai
-  name: devdemoconai
+  host: digital-conf
+  name: digital-conf
   memory: 64M
   stack: cflinuxfs2

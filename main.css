@@ -667,6 +667,19 @@ h5.ibmPlex {
 .ibmMono{
   font-family: 'IBM Plex Mono', monospace;
 }
+#processingForm{
+  display:none;
+  color:#0461fb;
+}
+#done{
+  display:none;
+  color:#5dd6d2;
+}
+#ErrorForm{
+  color:#ef737a;
+  display:none;
+  
+}
 
 /* @extend display-flex; */
 display-flex,
