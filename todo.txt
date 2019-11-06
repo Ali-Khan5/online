@@ -1,0 +1,28 @@
+Register for the FREE Digital Developer Conference and 
+get hands-on experience in cloud native and machine learning 
+technologies. You can enhance your development skills and earn
+ badges 
+https://digital-conf.mybluemix.net/
+
+
+
+ #digitaldevcon #ML #cloudnative
+
+
+youtube link:https://www.youtube.com/watch?v=_rmo5SbAC_o
+
+long description :
+The Digital Developer Conference: AI & Cloud is designed for 
+developers interested in Cloud and AI technologies by 
+addressing the unique needs of coders. At this free online conference, 
+get hands-on experience and engage with expert developers
+who will share insights on topics ranging from 
+AI/ML innovation from IBM AI Research, open-source deep learning,
+model bias identification, multicloud best practices, 
+cloud security with DevSecOps, 
+and getting the most out of cloud native development.
+See client stories and how technology is 
+being deployed to address some of the biggest
+issues facing developers today.
+Karachi Dates
+Saturday Nov. 9th 11:30 am- 4:00 pm (GMT +5)
